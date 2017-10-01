@@ -1,0 +1,48 @@
+using System;
+
+namespace Test
+{
+    class Area1     
+    {
+        public Area1(int lenght1, int lenght2) 
+        {
+            Console.WriteLine("Lenght size: " + lenght1);
+            Console.WriteLine("Lenght size: " + lenght2);
+            int area = lenght1 * lenght2;
+            int circut = 2 * lenght1 + 2 * lenght2;
+            Console.WriteLine("Area equals: " + area);
+            Console.WriteLine("circuit: " + circut + "\n");
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter lenght size: ");
+            
+            string text1 = Console.ReadLine();
+            int val1;
+           
+          
+          
+            bool intResultTryParse = int.TryParse(text1, out val1);
+            if (intResultTryParse == true)
+            {
+                Console.WriteLine(val1);
+            }
+            else
+            {
+                Console.WriteLine("Input is not in integer format");
+            }
+            Console.ReadLine();
+
+            Console.WriteLine("Enter second lenght size: ");
+            string text2 = Console.ReadLine();
+            int val2 = int.Parse(text2);
+
+            Area1 square1 = new Area1(val1,val2); 
+      
+            Console.ReadKey();
+        }
+    }
+}
